@@ -27,9 +27,9 @@ export function Header() {
           <span>Brasília, DF</span>
         </div>
 
-        <div className={styles.cart}>
+        <Link href={'/carrinho'} className={styles.cart}>
           <ShoppingCart size={22} weight="fill" />
-        </div>
+        </Link>
       </div>
     </header>
   )
