@@ -1,7 +1,7 @@
 'use client'
 import styles from '../styles/header.module.css'
 
-import coffeLogo from '../assets/Logo.svg'
+import coffeLogo from '@/images/Logo.svg'
 import Image from 'next/image'
 import { MapPin, ShoppingCart } from 'phosphor-react'
 import Link from 'next/link'

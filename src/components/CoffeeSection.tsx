@@ -1,11 +1,10 @@
-// components/CoffeeSection.tsx
 'use client'
 import { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { setCoffees } from '@/redux/coffeSlice' // Importe a action setCoffees
-import axios from 'axios'
-import styles from '../styles/coffeeList.module.css' // Ajuste o caminho do seu CSS
+import styles from '../styles/home.module.css'
 import Image from 'next/image'
+import { ShoppingCartSimple } from 'phosphor-react'
 
 // Definindo tipos para o estado
 interface Coffee {
@@ -26,8 +25,12 @@ export function CoffeeSection() {
   useEffect(() => {
     const fetchCoffees = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/coffees') // URL do seu JSON Server
-        dispatch(setCoffees(response.data.coffees)) // Atualiza o estado com os cafés
+        const response = await fetch('http://localhost:5000/coffees') // Consome a API local
+        if (!response.ok) {
+          throw new Error('Erro ao buscar os cafés')
+        }
+        const data = await response.json()
+        dispatch(setCoffees(data)) // Atualiza o estado global com os dados recebidos
       } catch (error) {
         console.error('Erro ao carregar cafés:', error)
       }
@@ -43,17 +46,45 @@ export function CoffeeSection() {
         <p>Carregando cafés...</p>
       ) : (
         coffees.map((coffee) => (
-          <div key={coffee.id} className={styles.coffeeItem}>
+          <div key={coffee.id} className={styles.card}>
+            {/* Imagem do café */}
             <Image
               src={coffee.image}
               alt={coffee.title}
+              width={110}
+              height={110}
+              quality={100}
               className={styles.coffeeImage}
             />
-            <h3>{coffee.title}</h3>
+            <div className={styles.tags}>
+              {coffee.tags.map((tag, index) => (
+                <span key={index} className={styles.tag}>
+                  {tag.toUpperCase()}
+                </span>
+              ))}
+            </div>
+
+            {/* Informações do café */}
+            <h3 className={styles.firstSpan}>{coffee.title}</h3>
             <p>{coffee.description}</p>
-            <p>
-              <strong>Preço:</strong> R${coffee.price}
-            </p>
+            <div className={styles.payCard}>
+              {/* Preço */}
+              <span>
+                R$ <strong>{coffee.price.toFixed(2)}</strong>
+              </span>
+
+              {/* Controles de quantidade */}
+              <div className={styles.quantityControls}>
+                <button>-</button>
+                <span>1</span>
+                <button>+</button>
+              </div>
+
+              {/* Botão de adicionar ao carrinho */}
+              <button className={styles.cartButton}>
+                <ShoppingCartSimple size={20} weight="fill" />
+              </button>
+            </div>
           </div>
         ))
       )}

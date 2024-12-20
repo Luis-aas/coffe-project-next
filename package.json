@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "concurrently \"npm run json-server\" \"npm run next\"",
-    "json-server": "json-server --watch data.json --port 5000",
+    "json-server": "json-server --watch ./src/data/data.json --port 5000",
     "next": "next dev -p 3000",
     "build": "next build",
     "start": "next start",
@@ -12,7 +12,6 @@
   },
   "dependencies": {
     "@reduxjs/toolkit": "^2.5.0",
-    "axios": "^1.7.9",
     "next": "14.2.11",
     "react": "^18",
     "react-dom": "^18",

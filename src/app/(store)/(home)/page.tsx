@@ -1,8 +1,8 @@
 import { Info } from '@/components/info'
 import styles from '@/styles/home.module.css'
 import Image from 'next/image'
-import coffeeDelivery from '@/assets/hero.svg'
-import CoffeList from '@/components/coffeList'
+import coffeeDelivery from '@/images/hero.svg'
+import { CoffeeSection } from '@/components/CoffeeSection'
 export default function Home() {
   return (
     <div>
@@ -30,15 +30,7 @@ export default function Home() {
         />
       </div>
 
-      <div className={styles.listCoffe}>
-        <h2>Nossos Cafes</h2>
-
-        <CoffeList />
-        <CoffeList />
-        <CoffeList />
-        <CoffeList />
-        <CoffeList />
-      </div>
+      <CoffeeSection />
     </div>
   )
 }
