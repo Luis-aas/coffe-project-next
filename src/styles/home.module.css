@@ -1,3 +1,4 @@
+
 /* Contêiner Principal de Introdução */
 .introContainer {
   display: grid;
@@ -201,3 +202,18 @@
 .cartButton:hover {
   background: var(--purple);
 }
+
+.body{
+    display: flex;
+    justify-content: space-between;
+    background-image: url('../public/images/hero-bg.svg');
+   
+    height: 544px;
+    width: 100vw;
+    position: relative;
+    padding: 0 10rem;
+
+    object-fit: cover;
+    
+}
+
