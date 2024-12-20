@@ -1,0 +1,203 @@
+/* Contêiner Principal de Introdução */
+.introContainer {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  background: 
+  linear-gradient(to top, var(--background) 0%, rgba(255, 255, 255, 0) 20%),
+  linear-gradient(to bottom, var(--background) 0%, rgba(255, 255, 255, 0) 20%),
+  url('../assets/hero-bg.svg');
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  background-repeat: no-repeat;
+  height: 544px;
+  position: relative;
+  padding: 6.75rem 10rem;
+  object-fit: cover;
+}
+
+/* Texto da Seção de Introdução */
+.text {
+  margin-bottom: 4.125rem;
+  width: 36.75rem;
+}
+
+.text h1 {
+  font-family: var(--titleXL-font-family);
+  font-size: var(--titleXL-font-size);
+  line-height: var(--titleXL-line-height);
+  font-weight: var(--titleXL-font-weight);
+  color: var(--base-title);
+  margin-bottom: 1rem;
+}
+
+.text span {
+  font-family: var(--textL-font-family);
+  font-size: var(--textL-font-size);
+  line-height: var(--textL-line-height);
+  font-weight: var(--textL-font-weight);
+  color: var(--base-subtitle);
+}
+
+/* Informações */
+.info {
+  width: max-content;
+  height: 5.25rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-row-gap: 20px;
+}
+
+.info div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 17px;
+}
+
+.info svg {
+  border-radius: 999px;
+  padding: 8px;
+}
+
+/* Lista de Cafés */
+.listCoffe {
+  padding: 2.7rem 10rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 2rem;
+}
+
+.listCoffe h2 {
+  padding-bottom: 2rem;
+  font-family: var(--titleL-font-family);
+  font-size: var(--titleL-font-size);
+  line-height: var(--titleL-line-height);
+  font-weight: var(--titleL-font-weight);
+  color: var(--base-title);
+  width: 100%;
+  grid-column: 1 / -1;
+  display: block;
+}
+
+/* Cartão de Produto (Café) */
+.card {
+  background: var(--base-card);
+  width: 16rem;
+  height: 19.37rem;
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  padding: 0 1.5rem;
+  border-radius: 0 30px 0 30px;
+}
+
+.card img {
+  margin-top: -1.25rem;
+  align-self: center;
+}
+
+.card p:nth-of-type(2) {
+  text-align: center;
+  font-family: var(--textS-font-family);
+  font-size: var(--textS-font-size);
+  line-height: var(--textS-line-height);
+  font-weight: var(--textS-font-weight);
+  color: var(--base-label);
+}
+
+.firstSpan {
+  text-align: center;
+  font-family: var(--titleS-font-family);
+  font-size: var(--titleS-font-size);
+  line-height: var(--titleS-line-height);
+  font-weight: var(--titleS-font-weight);
+  color: var(--base-subtitle);
+}
+
+/* Etiqueta de Produto */
+.tag {
+  padding: 0.2rem 0.5rem;
+  margin: 0 auto;
+  text-align: center;
+  width: max-content;
+  font-family: var(--tag-font-family);
+  font-size: var(--tag-font-size);
+  line-height: var(--tag-line-height);
+  font-weight: var(--tag-font-weight);
+  color: var(--yellow-dark);
+  background: var(--yellow-light);
+  border-radius: 30px;
+}
+
+
+
+/* Cartão de Pagamento */
+.payCard {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--titleS-font-family);
+  line-height: var(--titleS-line-height);
+}
+
+.payCard span {
+  font-size: 1rem;
+  color: var(--base-subtitle);
+  width: 100%;
+}
+
+.payCard strong {
+  font-size: 1.45rem;
+  font-weight: var(--titleL-font-weight);
+}
+
+/* Controles de Quantidade */
+.quantityControls {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background-color: var(--base-button);
+  border-radius: 8px;
+}
+
+.quantityControls button {
+  border: none;
+  color: var(--purple);
+  padding: 0.1rem 0.5rem;
+  cursor: pointer;
+  background: var(--base-button);
+  border-radius: 8px;
+  font-size: 2rem;
+  font-family: var(--titleS-font-family);
+  line-height: var(--titleS-line-height);
+  transition: background-color 0.4s
+}
+
+.quantityControls button:hover {
+  background: var(--base-hover);
+}
+
+.quantityControls span {
+  font-size: 1rem;
+  text-align: center;
+  color: var(--base-title);
+}
+
+/* Botão de Carrinho */
+.cartButton {
+  background: var(--purple-dark);
+  border: none;
+  border-radius: 10px;
+  color: var(--white);
+  cursor: pointer;
+  padding: 0.6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.4s
+}
+
+.cartButton:hover {
+  background: var(--purple);
+}

@@ -1,0 +1,35 @@
+.navbar{
+    margin: 2rem 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10rem;
+}
+
+.right{
+    display: inline-flex;
+}
+
+.location{
+    margin: 0 5px ;
+    padding: 5px 15px;
+    display: flex;
+    align-items: center;
+
+    background: var(--purple-light);
+    color: var(--purple);
+
+    border-radius: 8px;
+
+}
+
+.cart{
+    margin: 0 5px ;
+    padding: 3px 10px;
+    display: flex;
+    align-items: center;
+
+    background: var(--yellow-light);
+    color: var(--yellow-dark);
+
+    border-radius: 8px;
+}

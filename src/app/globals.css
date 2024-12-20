@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+    
+:root {
+    --yellow: #DBAC2C;
+    --yellow-dark: #C47F17;
+    --yellow-light: #F1E9C9;
+
+    --purple:#8047F8;
+    --purple-dark:#4B2995;
+    --purple-light:#EBE5F9;
+
+    --base-title: #272221;
+    --base-subtitle: #403937;
+    --base-text: #574F4D;
+    --base-label: #8D8686;
+    --base-hover: #D7D5D5;
+    --base-button: #E6E5E5;
+    --base-input: #EDEDED;
+    --base-card: #F3F2F2;
+
+    --background: #FAFAFA;
+    --white: #FFFFFF;
+
+
+      /* Title XL */
+  --titleXL-font-family: 'Baloo 2', sans-serif;
+  --titleXL-font-size: 3rem;
+  --titleXL-line-height: 130%;
+  --titleXL-font-weight: 800;
+
+  /* Title L */
+  --titleL-font-family: 'Baloo 2', sans-serif;
+  --titleL-font-size: 2rem;
+  --titleL-line-height: 130%;
+  --titleL-font-weight: 800;
+
+  /* Title M */
+  --titleM-font-family: 'Baloo 2', sans-serif;
+  --titleM-font-size: 1.5rem;
+  --titleM-line-height: 130%;
+  --titleM-font-weight: 800;
+
+  /* Title S */
+  --titleS-font-family: 'Baloo 2', sans-serif;
+  --titleS-font-size: 1.25rem;
+  --titleS-line-height: 130%;
+  --titleS-font-weight: 700;
+
+  /* Title XS */
+  --titleXS-font-family: 'Baloo 2', sans-serif;
+  --titleXS-font-size: 1.125rem;
+  --titleXS-line-height: 130%;
+  --titleXS-font-weight: 700;
+
+  /* Text L */
+  --textL-font-family: 'Roboto', sans-serif;
+  --textL-font-size: 1.25rem;
+  --textL-line-height: 130%;
+  --textL-font-weight: 400;
+
+  /* Text M */
+  --textM-font-family: 'Roboto', sans-serif;
+  --textM-font-size: 1rem;
+  --textM-line-height: 130%;
+  --textM-font-weight: 400;
+
+  /* Text S */
+  --textS-font-family: 'Roboto', sans-serif;
+  --textS-font-size: 0.875rem;
+  --textS-line-height: 130%;
+  --textS-font-weight: 400;
+
+  /* Text XS */
+  --textXS-font-family: 'Roboto', sans-serif;
+  --textXS-font-size: 0.75rem;
+  --textXS-line-height: 130%;
+  --textXS-font-weight: 700;
+
+  /* Tag */
+  --tag-font-family: 'Roboto', sans-serif;
+  --tag-font-size: 0.625rem;
+  --tag-line-height: 130%;
+  --tag-font-weight: 700;
+
+  /* Button G */
+  --buttonG-font-family: 'Roboto', sans-serif;
+  --buttonG-font-size: 0.875rem;
+  --buttonG-line-height: 160%;
+  --buttonG-font-weight: 700;
+
+  /* Button M */
+  --buttonM-font-family: 'Roboto', sans-serif;
+  --buttonM-font-size: 0.75rem;
+  --buttonM-line-height: 160%;
+  --buttonM-font-weight: 400;
+}
+  
+
+
+
+
+*{
+  margin: 0;
+  padding: 0; 
+  box-sizing: border-box;
+  
+}
+
+body{
+  background: var(--background);
+  color: var(--base-text);
+  -webkit-font-smoothing: antialiased;
+}
+
+body, input, textarea, button{
+  font-family: 'Roboto', sans-serif;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+}
